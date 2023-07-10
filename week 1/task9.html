@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asynchronous Operation</title>
+  <script>
+    function Operation(callback) {
+      setTimeout(function() {
+        var result = "Operation completed successfully.";
+
+        callback(result);
+      }, 2000);
+    }
+
+    function handleResult(result) {
+      console.log(result);
+    }
+  </script>
+</head>
+<body>
+  <h1>Asynchronous Operation</h1>
+  <button onclick="Operation(handleResult)">Start Asynchronous Operation</button>
+</body>
+</html>

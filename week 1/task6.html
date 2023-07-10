@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scope Behavior</title>
+  <script>
+    function testScope() {
+      var varVariable = "This is a var variable.";
+      let letVariable = "This is a let variable.";
+      const constVariable = "This is a const variable.";
+    }
+
+    function accessVariables() {
+      console.log(varVariable);    // undefined
+      console.log(letVariable);    // ReferenceError: letVariable is not defined
+      console.log(constVariable);  // ReferenceError: constVariable is not defined
+    }
+  </script>
+</head>
+<body>
+  <h1>Scope Behavior</h1>
+
+  <button onclick="testScope(); accessVariables();">Test Scope</button>
+
+  <script>
+    var varVariable = "This is a global var variable.";
+    let letVariable = "This is a global let variable.";
+    const constVariable = "This is a global const variable.";
+  </script>
+</body>
+</html>

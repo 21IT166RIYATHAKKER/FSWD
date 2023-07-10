@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favorite Books</title>
+  <script>
+    function displayBooks(books) {
+      var booksContainer = document.getElementById("books-container");
+      booksContainer.innerHTML = "";
+
+      for (var i = 0; i < books.length; i++) {
+        var book = books[i];
+        var bookElement = document.createElement("p");
+        bookElement.textContent = book;
+        booksContainer.appendChild(bookElement);
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="displayBooks(['Book 1', 'Book 2', 'Book 3', 'Book 4', 'Book 5'])">Display Books</button>
+  <div id="books-container"></div>
+</body>
+</html>

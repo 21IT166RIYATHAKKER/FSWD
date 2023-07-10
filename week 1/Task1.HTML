@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+function displayVariables() {
+      var varr1 = "Hello world"; 
+      let varr2 = 12345;       
+      const varr3 = "Riya Thakker";   
+
+      var outputElement = document.getElementById("message");
+
+      outputElement.innerHTML = "Variable using var: " + varr1 + "<br>";
+      outputElement.innerHTML += "Variable using let: " + varr2+ "<br>";
+      outputElement.innerHTML += "Variable using const: " + varr3 + "<br>";
+    }
+</script>
+    <title>
+        Task 1
+    </title>
+</head>
+<body>
+<h2>Variable Examples</h2>
+  <button onclick="displayVariables()">Display Variables</button>
+  <div id="message"></div>
+
+</body>
+</html>
